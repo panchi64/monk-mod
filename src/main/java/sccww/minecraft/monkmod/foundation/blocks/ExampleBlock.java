@@ -23,6 +23,13 @@ public class ExampleBlock {
         return new Block(
                 AbstractBlock.Properties
                         .of(Material.STONE)
+                        /*
+                        I believe strength is the equivalent of the previous property called hardnessAndResistance
+                        Where:
+                        1st float parameter =  hardness of the block (time it takes to mine. Stone has a hardness of 1.5f)
+                        2nd float parameter = resistance to explosion (bedrock has a hardness of -1.0f)
+                         */
+                        .strength(1.5f,6.0f)
                         .harvestLevel(2)
                         .harvestTool(ToolType.PICKAXE)
                         .sound(SoundType.STONE)
