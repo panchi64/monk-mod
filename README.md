@@ -29,7 +29,7 @@ grace.
 💋 Kiss creepers: Who said Creepers couldn't use some love? Turn fear into friendship with your newfound abilities!
 
 👀 Have staring contests with skeletons: Lock eyes with the undead, exert your monk-like focus, and command respect even
-from those most formidable foes.
+from those formidable foes.
 
 And that's just the beginning! Countless other awe-inspiring surprises await as you progress through 20 enlightening
 levels. Each level reveals a mini-quest, leading you closer to unlocking extraordinary abilities that redefine the very
