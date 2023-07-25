@@ -10,7 +10,7 @@ public class QuarterstaffItem implements ToolMaterial  {
 
     @Override
     public int getDurability() {
-        return 500;
+        return 190;
     }
 
     @Override
@@ -42,9 +42,9 @@ public class QuarterstaffItem implements ToolMaterial  {
                 Items.STRIPPED_JUNGLE_LOG,
                 Items.STRIPPED_OAK_LOG,
                 Items.STRIPPED_SPRUCE_LOG,
-                Items.STRIPPED_MANGROVE_LOG,
                 Items.STRIPPED_CRIMSON_STEM,
-                Items.STRIPPED_WARPED_STEM
+                Items.STRIPPED_WARPED_STEM,
+                Items.STRIPPED_MANGROVE_LOG
         );
     }
 }

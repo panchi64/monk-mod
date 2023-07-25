@@ -5,8 +5,8 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
@@ -20,12 +20,12 @@ public class MonkMod implements ModInitializer {
 
 //	Items:
 //	- Weapons
-
-    public static final ToolItem QUARTERSTAFF = Registry.register(
+    public static final SwordItem QUARTERSTAFF = Registry.register(
 			Registry.ITEM,
 			new Identifier("monk_mod", "quarterstaff"),
-			new SwordItem(QuarterstaffItem.INSTANCE, 3, 0F, new FabricItemSettings())
+			new SwordItem(QuarterstaffItem.INSTANCE, 3, 0F, new FabricItemSettings().group(ItemGroup.COMBAT))
 	);
+
 
 	public static final Item THROWING_STAR = Registry.register(
 			Registry.ITEM,
@@ -62,7 +62,6 @@ public class MonkMod implements ModInitializer {
 			new Identifier("monk_mod", "dart"),
 			new Item(new FabricItemSettings())
 	);
-
 
 	@Override
     public void onInitialize() {
