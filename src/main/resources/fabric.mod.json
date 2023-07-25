@@ -9,8 +9,8 @@
     "Warrior_Katara"
   ],
   "contact": {
-    "homepage": "monkmod.franciscocasiano.com",
-    "sources": "https://github.com/panchi64/monk-mod"
+    "homepage": "https://github.com/panchi64/monk-mod",
+    "issues": "https://github.com/panchi64/monk-mod/issues"
   },
   "license": "CC0-1.0",
   "icon": "assets/monk_mod/icon.png",
