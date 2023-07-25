@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  W",
+    " W ",
+    "W  "
+  ],
+  "key": {
+    "W": {
+      "tag": "monk_mod:stripped_logs_and_stems"
+    }
+  },
+  "result": {
+    "item": "monk_mod:quarterstaff",
+    "count": 1
+  }
+}

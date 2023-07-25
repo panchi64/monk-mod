@@ -1,9 +1,12 @@
 package com.franciscocasiano.monkmod;
 
+import com.franciscocasiano.monkmod.item.QuarterstaffItem;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
@@ -18,10 +21,10 @@ public class MonkMod implements ModInitializer {
 //	Items:
 //	- Weapons
 
-    public static final Item QUARTERSTAFF = Registry.register(
+    public static final ToolItem QUARTERSTAFF = Registry.register(
 			Registry.ITEM,
 			new Identifier("monk_mod", "quarterstaff"),
-			new Item(new FabricItemSettings())
+			new SwordItem(QuarterstaffItem.INSTANCE, 3, 0F, new FabricItemSettings())
 	);
 
 	public static final Item THROWING_STAR = Registry.register(
