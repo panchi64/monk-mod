@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "monk_mod",
-  "version": "${version}",
+  "version": "0.1.0",
   "name": "Monk Mod",
   "description": "Prepare to delve into a realm of unparalleled abilities and experience gameplay like never before. Say farewell to traditional tools and armor as you embrace the path of natural prowess and spiritual enlightenment.",
   "authors": [
@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.franciscocasiano.monkmod.ExampleMod"
+      "com.franciscocasiano.monkmod.MonkMod"
     ],
     "client": [
       "com.franciscocasiano.monkmod.ExampleModClient"
