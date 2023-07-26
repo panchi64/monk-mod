@@ -31,7 +31,7 @@ public class QuarterstaffItem implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 0;
+        return 10;
     }
 
     @Override

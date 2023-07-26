@@ -27,7 +27,7 @@ public class ThrowingStarItem extends Item {
         if (!world.isClient) {
             ThrowingStarEntity thrwStarEntity = new ThrowingStarEntity(world, player);
             thrwStarEntity.setItem(itemStack);
-            thrwStarEntity.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 2.5F, 0.8F);
+            thrwStarEntity.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 2F, 0.8F);
             world.spawnEntity(thrwStarEntity);
         }
 
