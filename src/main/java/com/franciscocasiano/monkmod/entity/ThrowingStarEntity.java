@@ -42,7 +42,7 @@ public class ThrowingStarEntity extends ThrownItemEntity {
     @Environment(EnvType.CLIENT)
     private ParticleEffect getParticleParameters() {
         ItemStack itemStack = this.getItem();
-        return itemStack.isEmpty() ? ParticleTypes.ASH : new ItemStackParticleEffect(ParticleTypes.ITEM, itemStack);
+        return itemStack.isEmpty() ? ParticleTypes.BUBBLE_POP : new ItemStackParticleEffect(ParticleTypes.ITEM, itemStack);
     }
 
     @Environment(EnvType.CLIENT)
@@ -64,18 +64,18 @@ public class ThrowingStarEntity extends ThrownItemEntity {
         entity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float) dmgAmount);
 
 //        Make a sound if a living entity is hit
-        if (entity instanceof LivingEntity) {
-            this.playSound(SoundEvents.BLOCK_ANVIL_HIT, 1.0F, 1.2F);
-            if (entity instanceof PlayerEntity) {
-                this.playSound(SoundEvents.ENTITY_ARROW_HIT_PLAYER, 1.0F, 1.2F);
+
+        if (entity instanceof PlayerEntity) {
+            this.playSound(SoundEvents.ENTITY_ARROW_HIT_PLAYER, 0.2F, 0.3F);
             }
-        }
+
     }
 
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (!this.world.isClient) {
             this.world.sendEntityStatus(this, (byte) 3);
+            this.playSound(SoundEvents.BLOCK_ANVIL_HIT, 1.0F, 1.2F);
             this.kill();
         }
 

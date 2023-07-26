@@ -21,18 +21,18 @@ public class ThrowingStarItem extends Item {
         super(settings);
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_EGG_THROW, SoundCategory.NEUTRAL, 0.5F, 1F);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
+        ItemStack itemStack = player.getStackInHand(hand);
+        world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_EGG_THROW, SoundCategory.NEUTRAL, 0.5F, 1F);
         if (!world.isClient) {
-            ThrowingStarEntity thrwStarEntity = new ThrowingStarEntity(world, user);
+            ThrowingStarEntity thrwStarEntity = new ThrowingStarEntity(world, player);
             thrwStarEntity.setItem(itemStack);
-            thrwStarEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, 2.5F, 0F);
+            thrwStarEntity.setVelocity(player, player.getPitch(), player.getYaw(), 0.0F, 2.5F, 0.8F);
             world.spawnEntity(thrwStarEntity);
         }
 
-        user.incrementStat(Stats.USED.getOrCreateStat(this));
-        if (!user.getAbilities().creativeMode) {
+        player.incrementStat(Stats.USED.getOrCreateStat(this));
+        if (!player.getAbilities().creativeMode) {
             itemStack.decrement(1);
         }
 

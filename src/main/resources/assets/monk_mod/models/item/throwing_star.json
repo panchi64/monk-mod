@@ -1,6 +1,37 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "monk_mod:item/throwing_star"
-  }
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "monk_mod:item/throwing_star"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [45, -75, 0],
+			"translation": [-1, 1.75, -0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-45, -75, -7],
+			"translation": [-1, 1.75, -0.75],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [10, 75, 0],
+			"translation": [3.25, 1.25, -1.5],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [10, 75, 0],
+			"translation": [3.25, 1.25, -1.5],
+			"scale": [0.75, 0.75, 0.5]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"head": {
+			"rotation": [97, 129, -50],
+			"translation": [-2, 6, -8.25],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
 }
