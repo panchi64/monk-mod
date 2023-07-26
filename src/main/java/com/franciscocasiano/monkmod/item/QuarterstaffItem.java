@@ -1,10 +1,11 @@
 package com.franciscocasiano.monkmod.item;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class QuarterstaffItem implements ToolMaterial  {
+import static com.franciscocasiano.monkmod.data.ItemTagGenerator.STRIPPED_LOGS_AND_STEMS;
+
+public class QuarterstaffItem implements ToolMaterial {
 
     public static final QuarterstaffItem INSTANCE = new QuarterstaffItem();
 
@@ -35,16 +36,6 @@ public class QuarterstaffItem implements ToolMaterial  {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(
-                Items.STRIPPED_ACACIA_LOG,
-                Items.STRIPPED_BIRCH_LOG,
-                Items.STRIPPED_DARK_OAK_LOG,
-                Items.STRIPPED_JUNGLE_LOG,
-                Items.STRIPPED_OAK_LOG,
-                Items.STRIPPED_SPRUCE_LOG,
-                Items.STRIPPED_CRIMSON_STEM,
-                Items.STRIPPED_WARPED_STEM,
-                Items.STRIPPED_MANGROVE_LOG
-        );
+        return Ingredient.fromTag(STRIPPED_LOGS_AND_STEMS);
     }
 }

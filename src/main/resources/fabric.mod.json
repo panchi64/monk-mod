@@ -23,7 +23,7 @@
       "com.franciscocasiano.monkmod.ExampleModClient"
     ],
     "fabric-datagen": [
-      "com.franciscocasiano.monkmod.ExampleModDataGenerator"
+      "com.franciscocasiano.monkmod.DataGeneration"
     ]
   },
   "mixins": [
