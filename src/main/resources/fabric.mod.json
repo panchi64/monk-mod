@@ -20,7 +20,7 @@
       "com.franciscocasiano.monkmod.MonkMod"
     ],
     "client": [
-      "com.franciscocasiano.monkmod.ExampleModClient"
+      "com.franciscocasiano.monkmod.MonkModClient"
     ],
     "fabric-datagen": [
       "com.franciscocasiano.monkmod.DataGeneration"
